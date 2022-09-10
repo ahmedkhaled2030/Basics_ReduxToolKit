@@ -1,4 +1,4 @@
-# Getting Started with React Redux oldVersion
+# Getting Started with React Redux Toolkit
 
-This project is a practical application of (React Redux oldVersion) that i have tought by kimzCodes (Youtube channel) 
+This project is a practical application of (Redux Toolkit) that i have tought by kimzCodes (Youtube channel) 
 
