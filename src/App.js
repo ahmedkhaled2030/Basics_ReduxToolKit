@@ -1,17 +1,17 @@
 import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useCallback } from "react";
-import { increase, decrease } from '../store/index'
+
+import { increase, decrease } from './store/counterSlice'
 
 function App() {
-  const globalState = useSelector((state) => state);
-  const dispatch = useDispatch();
+  const globalState = useSelector((state) =>state)
+   const dispatch = useDispatch();
 
   return (
     <div className="App">
       <h1>Hello Redux Basic</h1>
 
-      <div className="counter">Counter: {globalState.value}</div>
+      <div className="counter">Counter: {globalState.counter.value}</div>
       <div>
         <button className="btn" onClick={() => dispatch(increase(5))}>increase +</button>
         <button className="btn" onClick={() => dispatch(decrease(2))}>decrease -</button>
