@@ -1,4 +1,5 @@
-import { createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import { logout } from './authSlice'
 
 
 
@@ -15,6 +16,16 @@ const counterSlice = createSlice({
       state.value -= action.payload;
     },
   },
+  extraReducers: {
+    
+  //extraReducer > هو معمول عشان استمع لاكشن مبني اصلا خارج السلايز
+  //state is the state of counterSlice
+  //action is the action of authSlice
+    [logout]: (state, action) => {
+      state.value = 0 
+    }
+  }
+
 });
 
 
