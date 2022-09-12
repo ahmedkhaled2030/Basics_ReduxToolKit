@@ -3,7 +3,7 @@ import {  useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { increase, decrease } from "./store/counterSlice";
-import { logIn, logOut } from "./store/authSlice";
+import { login, logout } from "./store/authSlice";
 
 //1-useEffect
 //2-update State
@@ -39,12 +39,12 @@ function App() {
 
   const clickHandler = () => {
     console.log(globalState.auth.isLoggedIn);
-    if (globalState.auth.isLoggedIn == true) {
-      dispatch(logOut());
+    if (globalState.auth.isLoggedIn === true) {
+      dispatch(logout());
     }
 
-    if (globalState.auth.isLoggedIn == false) {
-      dispatch(logIn());
+    if (globalState.auth.isLoggedIn === false) {
+      dispatch(login());
     }
   };
 
